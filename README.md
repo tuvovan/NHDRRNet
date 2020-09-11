@@ -102,6 +102,13 @@ optional arguments: -h, --help                    show this help message and exi
 |:---:|:---:|:---:|:---:|
 | input 1 | input 2 | input 3 | output |
 
+<p float="left">
+  <img src="Test/PAPER/PeopleStanding/262A2866.png" width="256" />
+  <img src="Test/PAPER/PeopleStanding/262A2867.png" width="256" /> 
+  <img src="Test/PAPER/PeopleStanding/262A2868.png" width="256" />
+  <img src="Test/PAPER/PeopleStanding/hdr.png" width="256" />
+</p>
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/tuvovan/Zero_DCE_TF/blob/master/LICENSE) file for details
