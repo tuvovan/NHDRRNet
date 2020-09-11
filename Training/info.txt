@@ -1,2 +1,2 @@
 training data is put in here
-you can download the data from Kalantari website or follow the link to download my preprocessed data below
+you can download the data from Kalantari website.
