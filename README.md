@@ -79,8 +79,9 @@ optional arguments: -h, --help                show this help message and exit
 ```
 
 ### Testing
+Download the weight [here](https://drive.google.com/file/d/1OjJYirwRa8cLGzzdRYRkjq_1FokyI80V/view?usp=sharing) and put it to the folder.
 ```
-usage: test_real.py [-h] [--test_path TEST_PATH] [--gpu GPU]
+usage: test.py [-h] [--test_path TEST_PATH] [--gpu GPU]
                     [--weight_test_path WEIGHT_TEST_PATH] [--filter FILTER]
                     [--kernel KERNEL] [--encoder_kernel ENCODER_KERNEL]
                     [--decoder_kernel DECODER_KERNEL]
@@ -104,7 +105,7 @@ optional arguments: -h, --help                    show this help message and exi
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/tuvovan/Zero_DCE_TF/blob/master/LICENSE) file for details
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/tuvovan/NHDRRNet/blob/master/LICENSE) file for details
 
 ## References
 [1] Deep HDR Imaging via A Non-Local Network - TIP 2020 [link](https://ieeexplore.ieee.org/document/8989959)

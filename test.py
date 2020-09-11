@@ -50,7 +50,7 @@ if __name__ == "__main__":
 	# Input Parameters
 	parser.add_argument('--test_path', type=str, default="Test/EXTRA/001/")
 	parser.add_argument('--gpu', type=int, default=1)
-	parser.add_argument('--weight_test_path', type=str, default= "weights/epoch_rgb.h5")
+	parser.add_argument('--weight_test_path', type=str, default= "weights/best.h5")
 	parser.add_argument('--filter', type=int, default= 32)
 	parser.add_argument('--kernel', type=int, default= 3)
 	parser.add_argument('--encoder_kernel', type=int, default= 3)
