@@ -98,33 +98,34 @@ optional arguments: -h, --help                    show this help message and exi
 ```
 
 #### Result
-![DEMO](demo/peopleStanding.png) 
+![DEMO0](demo/peopleStanding.png) 
+![DEMO1](demo/demo1.png) 
+![DEMO2](demo/demo2.png) 
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/tuvovan/Zero_DCE_TF/blob/master/LICENSE) file for details
 
 ## References
-[1] Zero-Reference Deep Curve Estimation for Low-Light Image Enhancement - CVPR 2020 [link](https://openaccess.thecvf.com/content_CVPR_2020/papers/Guo_Zero-Reference_Deep_Curve_Estimation_for_Low-Light_Image_Enhancement_CVPR_2020_paper.pdf)
+[1] Deep HDR Imaging via A Non-Local Network - TIP 2020 [link](https://ieeexplore.ieee.org/document/8989959)
 
-[3] Low-light dataset - [link](https://drive.google.com/file/d/1HiLtYiyT9R7dR9DRTLRlUUrAicC4zzWN/view)
+[3] Training and Testing dataset - [link](https://cseweb.ucsd.edu/~viscomp/projects/SIG17HDR/)
 
 ## Citation
 ```
-    @misc{guo2020zeroreference,
-    title={Zero-Reference Deep Curve Estimation for Low-Light Image Enhancement},
-    author={Chunle Guo and Chongyi Li and Jichang Guo and Chen Change Loy and Junhui Hou and Sam Kwong and Runmin Cong},
-    year={2020},
-    eprint={2001.06826},
-    archivePrefix={arXiv},
-    primaryClass={cs.CV}
+    @ARTICLE{8989959,  author={Q. Yan and L. Zhang and Y. Liu and Y. Zhu and J. Sun and Q. Shi and Y. Zhang},  
+    journal={IEEE Transactions on Image Processing},   
+    title={Deep HDR Imaging via A Non-Local Network},   
+    year={2020},  
+    volume={29},  
+    number={},  
+    pages={4308-4322},}
 }
 ```
 ## Acknowledgments
-
-- This repo is the re-production of the original pytorch [version](https://github.com/Li-Chongyi/Zero-DCE)
-- Thank you for helping me to understand more about pains that tensorflow may cause.
-- Final words:
-    - Any ideas on updating or misunderstanding, please send me an email: <vovantu.hust@gmail.com>
-    - If you find this repo helpful, kindly give me a star.
+- This work based on the paper mentioned above with few modification:
+    - the fixed size of the adaptive average pooling (16 instead of 32 as assigned in the paper)
+    - the number of triple pass module is defined as 10 to match the number of 32M as stated in the paper.
+- Any ideas on updating or misunderstanding, please send me an email: <vovantu.hust@gmail.com>
+- If you find this repo helpful, kindly give me a star.
 
