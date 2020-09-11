@@ -98,7 +98,7 @@ optional arguments: -h, --help                    show this help message and exi
 ```
 
 #### Result
-![INPUT](Test/PAPER/PeopleStanding/262A2866.png) | [INPUT](Test/PAPER/PeopleStanding/262A2867.png) | [INPUT](Test/PAPER/PeopleStanding/262A2868.png) | ![OUTPUT](Test/PAPER/PeopleStanding/hdr.png) |
+![INPUT](Test/PAPER/PeopleStanding/262A2866.png =256x) | [INPUT](Test/PAPER/PeopleStanding/262A2867.png =256x) | [INPUT](Test/PAPER/PeopleStanding/262A2868.png =256x) | ![OUTPUT](Test/PAPER/PeopleStanding/hdr.png =256x) |
 |:---:|:---:|:---:|:---:|
 | input 1 | input 2 | input 3 | output |
 
