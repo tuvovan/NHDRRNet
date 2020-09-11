@@ -120,7 +120,6 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
     volume={29},  
     number={},  
     pages={4308-4322},}
-}
 ```
 ## Acknowledgments
 - This work based on the paper mentioned above with few modification:
