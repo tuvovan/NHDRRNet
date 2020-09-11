@@ -1,6 +1,5 @@
 import os
 import sys
-import HDR
 import glob
 import time
 import math
@@ -9,6 +8,7 @@ import numpy as np
 import tensorflow as tf 
 import generate_HDR_dataset
 
+from HDR import *
 from val import run
 from PIL import Image
 from tensorflow.keras import Model, Input
@@ -62,13 +62,13 @@ if __name__ == "__main__":
 	if not os.path.exists(config.checkpoints_folder):
 		os.mkdir(config.checkpoints_folder)
     
-    os.environ['CUDA_VISIBLE_DEVICES'] = config.gpu
+	os.environ['CUDA_VISIBLE_DEVICES'] = config.gpu
 
 	model_x = NHDRRNet(config)
-    x = Input(shape=(3, 256, 256, 6))
-    out = model_x.main_model(x)
-    model = Model(inputs=x, outputs=out)
-    model.load_weights(config.weight_test_path)
-    model.summary()
+	x = Input(shape=(3, 256, 256, 6))
+	out = model_x.main_model(x)
+	model = Model(inputs=x, outputs=out)
+	model.load_weights(config.weight_test_path)
+	model.summary()
 
 	run(config, model)
