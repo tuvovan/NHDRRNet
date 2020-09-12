@@ -20,48 +20,48 @@ class NHDRRNet(Model):
         return UpSampling2D(size=pool_size)(img) 
 
     def encoder_1(self, X, i):
-        X = Conv2D(int(filters*i), encoder_kernel, strides=(2,2), padding='same')(X)
+        X = Conv2D(int(self.filter*i), self.encoder_kernel, strides=(2,2), padding='same')(X)
         X = BatchNormalization()(X)
         X = ReLU()(X)
         return X
 
     def encoder_2(self, X, i):
-        X = Conv2D(int(filters*i), encoder_kernel, strides=(2,2), padding='same')(X)
+        X = Conv2D(int(self.filter*i), self.encoder_kernel, strides=(2,2), padding='same')(X)
         X = BatchNormalization()(X)
         X = ReLU()(X)
         return X
 
     def encoder_3(self, X, i):
-        X = Conv2D(int(filters*i), encoder_kernel, strides=(2,2), padding='same')(X)
+        X = Conv2D(int(self.filter*i), self.encoder_kernel, strides=(2,2), padding='same')(X)
         X = BatchNormalization()(X)
         X = ReLU()(X)
         return X
 
     def decoder_last(self, X):
-        X = Conv2DTranspose(3, decoder_kernel, strides=(2,2), padding='same')(X)
+        X = Conv2DTranspose(3, self.decoder_kernel, strides=(2,2), padding='same')(X)
         X = BatchNormalization()(X)
         X = ReLU()(X)
         return X
 
     def decoder(self, X, i):
-        X = Conv2DTranspose(int(filters*i), decoder_kernel, strides=(2,2), padding='same')(X)
+        X = Conv2DTranspose(int(self.filter*i), self.decoder_kernel, strides=(2,2), padding='same')(X)
         X = BatchNormalization()(X)
         X = LeakyReLU()(X)
         return X
 
     def triplepass(self, T0):
-        T1 = Conv2D(triple_pass_filter, kernel_size=(1,1), strides=(1,1), padding='same')(T0)
+        T1 = Conv2D(self.triple_pass_filter, kernel_size=(1,1), strides=(1,1), padding='same')(T0)
         T1 = ReLU()(T1)
 
-        T2 = Conv2D(triple_pass_filter, kernel_size=(3,3), strides=(1,1), padding='same')(T0)
+        T2 = Conv2D(self.triple_pass_filter, kernel_size=(3,3), strides=(1,1), padding='same')(T0)
         T2 = ReLU()(T2)
 
-        T3 = Conv2D(triple_pass_filter, kernel_size=(5,5), strides=(1,1), padding='same')(T0)
+        T3 = Conv2D(self.triple_pass_filter, kernel_size=(5,5), strides=(1,1), padding='same')(T0)
         T3 = ReLU()(T3)
 
         T3 = Add()([T1, T2, T3])
 
-        T4 = Conv2D(triple_pass_filter, kernel_size=(3,3), strides=(1,1), padding='same')(T3)
+        T4 = Conv2D(self.triple_pass_filter, kernel_size=(3,3), strides=(1,1), padding='same')(T3)
         T5 = Add()([T4, T0])
 
         return T5
