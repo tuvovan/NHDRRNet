@@ -12,7 +12,6 @@ def load_data(npy_path):
     return np.load(npy_path)
 
 class DataGenerator():
-
     def __init__(self, images_path, batch_size):
         self.shuffle = True
         self.imgs= load_data(images_path) 
