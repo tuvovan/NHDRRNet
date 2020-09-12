@@ -1,19 +1,20 @@
-import tensorflow as tf 
 import os
-import sys
-import argparse 
-import time
-import numpy as np
-import glob
-import math
 import cv2
-
-from tensorflow.keras import Model, Input
-from tensorflow.keras.layers import Concatenate, Conv2D, Input
-from PIL import Image
+import sys
+import glob
+import time
+import math
+import argparse
+import numpy as np
+import tensorflow as tf 
 import generate_HDR_dataset
-import HDR
 
+from HDR import *
+from val import run
+from PIL import Image
+from tensorflow.keras import Model, Input
+from tensorflow.keras.utils import multi_gpu_model
+from tensorflow.keras.layers import Concatenate, Conv2D, Input
 def get_test_data(images_path):
     imgs_np = np.zeros([1, 3, 256, 256, 6])
     file1 = open(os.path.join(images_path, 'exposure.txt'), 'r') 
