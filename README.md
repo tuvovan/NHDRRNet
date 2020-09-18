@@ -1,7 +1,7 @@
 # Deep HDR Imaging
 The Keras Implementation of the [Deep HDR Imaging via A Non-Local Network](https://ieeexplore.ieee.org/document/8989959) - TIP 2020
 ## Content
-- [Deep-HDR-Imaging](#zero-dce-tf)
+- [Deep-HDR-Imaging](#deep-hdr-imaging)
 - [Getting Started](#getting-tarted)
 - [Running](#running)
 - [References](#references)
