@@ -1,4 +1,3 @@
-# Update: I have just released my work on HDR imaging using Attention non-local network. Please check as follow: https://github.com/tuvovan/ANL-HDRI
 # Deep HDR Imaging
 The Keras Implementation of the [Deep HDR Imaging via A Non-Local Network](https://ieeexplore.ieee.org/document/8989959) - TIP 2020
 ## Content
@@ -130,3 +129,4 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 - Any ideas on updating or misunderstanding, please send me an email: <vovantu.hust@gmail.com>
 - If you find this repo helpful, kindly give me a star.
 
+# Update: I have just released my work on HDR imaging using Attention non-local network. Please check as follow: https://github.com/tuvovan/ANL-HDRI
