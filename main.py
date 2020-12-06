@@ -36,7 +36,7 @@ def augment(data):
 def train(config):
     os.environ['CUDA_VISIBLE_DEVICES'] = str(config.gpu)
     MU = 5000.0
-    # SDR = generate_HDR_dataset.DataGenerator(config.images_path, config.train_batch_size)
+    SDR = generate_HDR_dataset.DataGenerator(config.images_path, config.train_batch_size)
     lr = config.lr
 
     model_x = NHDRRNet(config)
