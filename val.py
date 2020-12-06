@@ -10,10 +10,8 @@ import tensorflow as tf
 import generate_HDR_dataset
 
 from HDR import *
-from val import run
 from PIL import Image
 from tensorflow.keras import Model, Input
-from tensorflow.keras.utils import multi_gpu_model
 from tensorflow.keras.layers import Concatenate, Conv2D, Input
 def get_test_data(images_path):
     imgs_np = np.zeros([1, 3, 256, 256, 6])

@@ -10,9 +10,9 @@ import tensorflow as tf
 import generate_HDR_dataset
 
 from val import run
+from HDR import *
 from PIL import Image
 from tensorflow.keras import Model, Input
-from tensorflow.keras.utils import multi_gpu_model
 from tensorflow.keras.layers import Concatenate, Conv2D, Input
 
 def progress(epoch, trained_sample ,total_sample, bar_length=25, total_loss=0, message=""):
@@ -36,11 +36,11 @@ def augment(data):
 def train(config):
     os.environ['CUDA_VISIBLE_DEVICES'] = str(config.gpu)
     MU = 5000.0
-    SDR = generate_HDR_dataset.DataGenerator(config.images_path, config.train_batch_size)
+    # SDR = generate_HDR_dataset.DataGenerator(config.images_path, config.train_batch_size)
     lr = config.lr
 
     model_x = NHDRRNet(config)
-    x = Input(shape=(3, 256, 256, 6))
+    x = Input(shape=(3, 512, 512, 6))
     out = model_x.main_model(x)
     model = Model(inputs=x, outputs=out)
     model.summary()
