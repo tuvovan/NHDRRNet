@@ -1,3 +1,5 @@
+# updated 12-06
+
 import os
 import sys
 import HDR
