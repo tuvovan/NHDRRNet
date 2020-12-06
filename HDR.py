@@ -8,7 +8,7 @@ from tensorflow.keras.layers import Conv2D, LeakyReLU, ReLU, BatchNormalization,
 
 class NHDRRNet(Model):
     def __init__(self, config):
-        super(DCE, self).__init__()
+        super(NHDRRNet, self).__init__()
 
         self.filter = config.filter
         self.encoder_kernel = config.encoder_kernel
