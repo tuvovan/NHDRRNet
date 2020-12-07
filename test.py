@@ -59,8 +59,8 @@ if __name__ == "__main__":
 
 	config = parser.parse_args()
 
-	if not os.path.exists(config.checkpoints_folder):
-		os.mkdir(config.checkpoints_folder)
+# 	if not os.path.exists(config.checkpoints_folder):
+# 		os.mkdir(config.checkpoints_folder)
     
 	os.environ['CUDA_VISIBLE_DEVICES'] = config.gpu
 
