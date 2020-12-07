@@ -62,7 +62,7 @@ if __name__ == "__main__":
 # 	if not os.path.exists(config.checkpoints_folder):
 # 		os.mkdir(config.checkpoints_folder)
     
-	os.environ['CUDA_VISIBLE_DEVICES'] = config.gpu
+	os.environ['CUDA_VISIBLE_DEVICES'] = str(config.gpu)
 
 	model_x = NHDRRNet(config)
 	x = Input(shape=(3, 256, 256, 6))
