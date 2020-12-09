@@ -40,7 +40,7 @@ pip install -r requirements.txt
     python main.py
     ```
 
-- Test ZERO_DCE
+- Test NHDRRNet
     ```
     python test.py
     ```
