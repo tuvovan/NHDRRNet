@@ -75,7 +75,7 @@ class NHDRRNet(Model):
         phi_rsh = Reshape((128, h*w))(phi)
 
         g = Conv2D(128, kernel_size=(1,1), padding='same')(X)
-        g_rsh = Reshape((h*w, 128))(phi)
+        g_rsh = Reshape((h*w, 128))(g)
 
         theta_phi = tf.matmul(theta_rsh, phi_rsh)
         theta_phi = tf.keras.layers.Softmax()(theta_phi)
