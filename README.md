@@ -79,7 +79,8 @@ optional arguments: -h, --help                show this help message and exit
 ```
 
 ### Testing
-Download the weight [here](https://drive.google.com/file/d/1OjJYirwRa8cLGzzdRYRkjq_1FokyI80V/view?usp=sharing) and put it to the folder.
+<!---Download the weight [here](https://drive.google.com/file/d/1OjJYirwRa8cLGzzdRYRkjq_1FokyI80V/view?usp=sharing) and put it to the folder.--->
+The weight file was deprecated. Will be updated soon.
 ```
 usage: test.py [-h] [--test_path TEST_PATH] [--gpu GPU]
                     [--weight_test_path WEIGHT_TEST_PATH] [--filter FILTER]
